@@ -37,6 +37,7 @@ public class CalorieTrackerFragment extends Fragment {
     ProgressView progressView1,progressView2,progressView3,progressView4;
     ProgressView carbPB,fibrePB,proteinPB,fatPB;
 
+
     CircularProgressIndicator circularProgressIndicatorCC,circularProgressIndicatorCB;
 
     View bottomSheetN;

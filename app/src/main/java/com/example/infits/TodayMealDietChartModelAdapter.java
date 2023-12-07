@@ -62,6 +62,7 @@ public class TodayMealDietChartModelAdapter extends RecyclerView.Adapter<TodayMe
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView mealName,day,time;
+        TextView calories,protiens,fats,carbs;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -69,6 +70,11 @@ public class TodayMealDietChartModelAdapter extends RecyclerView.Adapter<TodayMe
             mealName = itemView.findViewById(R.id.dietChartMealName);
             day = itemView.findViewById(R.id.txtDayName);
             time = itemView.findViewById(R.id.txtTimeDietChart);
+            calories = itemView.findViewById(R.id.textView7);
+            protiens = itemView.findViewById(R.id.textView28);
+            fats = itemView.findViewById(R.id.textView29);
+            carbs = itemView.findViewById(R.id.textView30);
+
 
         }
     }

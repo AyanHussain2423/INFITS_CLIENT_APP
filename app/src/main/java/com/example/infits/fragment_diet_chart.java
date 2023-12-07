@@ -10,6 +10,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,10 +36,13 @@ import com.android.volley.toolbox.Volley;
 import com.tenclouds.gaugeseekbar.GaugeSeekBar;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.Format;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -64,6 +68,7 @@ public class fragment_diet_chart extends Fragment {
     TodayMealDietChartModelAdapter todayMealDietChartModelAdapter;
     RecyclerView recyclerView;
     LinearLayoutManager linearLayoutManager;
+    TextView textView7,textView28,textView29,textView30;
     public static ArrayList<TodayMealDietChartModel> viewListModels = new ArrayList<>();
 
 
@@ -85,7 +90,9 @@ public class fragment_diet_chart extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate ( R.layout.fragment_diet_chart , container , false );
         hooks(view);
-
+        ArrayList<String> ca = new ArrayList<>();
+        ArrayList<String> datas = new ArrayList<>();
+        getmicronutrientdata();
         //set daily weekly and yearly in spinner
         ArrayAdapter<CharSequence> dailyAdapter = ArrayAdapter.createFromResource(requireActivity(),
                 R.array.spinner_diet_daily,R.layout.diet_spinner_dropdown_item );
@@ -199,7 +206,65 @@ public class fragment_diet_chart extends Fragment {
 
         btn_meal_check.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_fragment_diet_chart_to_diet_fourth2));
 
+        btn_meal_check.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_fragment_diet_chart_to_diet_fourth2));
+
+
         return view;
+    }
+
+    private void getmicronutrientdata() {
+        Log.d("getmicro nutrients","function called");
+        String url = "https://infits.in/androidApi/calorieTracker.php"; // main database api
+        //String url ="http://192.168.0.105//infits/calorieTracker.php"; // localhost
+
+        RequestQueue requestQueue= Volley.newRequestQueue(requireActivity());
+        Log.d("vollll", requestQueue.toString());
+        StringRequest request = new StringRequest(Request.Method.POST, url,
+                response -> {
+                    Log.d("Tracker macro", response);
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+
+                        JSONObject dataObject = jsonObject.getJSONObject("Data"); // calling the object from api
+                        JSONObject goalsObject = dataObject.getJSONObject("Goals"); //goals has all goals of item protien fibers fats etc
+
+                            String calorieconsumegoal = goalsObject.getString("CalorieConsumeGoal"); // calorie consume goal value is retrieved
+                            String carbgoal = goalsObject.getString("CarbsGoal");
+                            String proteingoal = goalsObject.getString("ProteinGoal");
+                            String fatgoal = goalsObject.getString("FatsGoal");
+
+                            Float carb = Float.valueOf(goalsObject.getString("CarbsGoal"));
+                            Float a = carb/carb*100;
+                            Log.d("hhh", String.valueOf(a));
+
+                        Log.d("Calories Consumed", calorieconsumegoal);
+                        textView7.setText(calorieconsumegoal +" kcal"); // setting value in textview
+                        textView28.setText(proteingoal + " g");
+                        textView29.setText(carbgoal + " g");
+                        textView30.setText(fatgoal + " g");
+
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                }, error -> Log.e("Traget Macro", error.toString())) {
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> data = new HashMap<>();
+                LocalDateTime now = LocalDateTime.now();// gets the current date and time
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd H:m:s");
+                data.put("clientID", DataFromDatabase.clientuserID);
+                data.put("today",dtf.format(now));
+                return data;
+            }
+        };
+        Volley.newRequestQueue(requireContext()).add(request);
+        request.setRetryPolicy(new DefaultRetryPolicy(50000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
     }
 
 
@@ -221,6 +286,10 @@ public class fragment_diet_chart extends Fragment {
         progressBarCarbs = view.findViewById(R.id.progressBarCarbsDietChart);
         progressBarFats = view.findViewById(R.id.progressBarFatsDietChart);
         processBar = view.findViewById(R.id.dietChartProgress);
+        textView7 = view.findViewById(R.id.textView7);
+        textView28 = view.findViewById(R.id.textView28);
+        textView29 = view.findViewById(R.id.textView29);
+        textView30 = view.findViewById(R.id.textView30);
         recyclerView = view.findViewById(R.id.dietChartRecylerView);
         linearLayoutManager= new LinearLayoutManager(requireActivity());
         recyclerView.setLayoutManager(linearLayoutManager);

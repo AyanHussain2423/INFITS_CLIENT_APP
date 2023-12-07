@@ -140,7 +140,7 @@ public class SleepTrackerFragment extends Fragment {
                 Log.d("response123",response.toString());
                 JSONObject jsonObject = new JSONObject(response);
                 JSONArray jsonArray = jsonObject.getJSONArray("sleep");
-                for (int i = 0;i<jsonArray.length();i++){
+                for (int i = 0;i<=jsonArray.length();i++){
                     JSONObject object = jsonArray.getJSONObject(i);
                     String data = object.getString("hrsSlept");
                     String date = object.getString("date");

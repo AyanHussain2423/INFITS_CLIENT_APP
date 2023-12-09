@@ -90,8 +90,6 @@ public class fragment_diet_chart extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate ( R.layout.fragment_diet_chart , container , false );
         hooks(view);
-        ArrayList<String> ca = new ArrayList<>();
-        ArrayList<String> datas = new ArrayList<>();
         getmicronutrientdata();
         //set daily weekly and yearly in spinner
         ArrayAdapter<CharSequence> dailyAdapter = ArrayAdapter.createFromResource(requireActivity(),
@@ -234,9 +232,7 @@ public class fragment_diet_chart extends Fragment {
                             String proteingoal = goalsObject.getString("ProteinGoal");
                             String fatgoal = goalsObject.getString("FatsGoal");
 
-                            Float carb = Float.valueOf(goalsObject.getString("CarbsGoal"));
-                            Float a = carb/carb*100;
-                            Log.d("hhh", String.valueOf(a));
+                        Log.d("aaa", String.valueOf(dataObject));
 
                         Log.d("Calories Consumed", calorieconsumegoal);
                         textView7.setText(calorieconsumegoal +" kcal"); // setting value in textview

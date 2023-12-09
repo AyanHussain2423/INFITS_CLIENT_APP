@@ -217,7 +217,6 @@ public class fragment_diet_chart extends Fragment {
         //String url ="http://192.168.0.105//infits/calorieTracker.php"; // localhost
 
         RequestQueue requestQueue= Volley.newRequestQueue(requireActivity());
-        Log.d("vollll", requestQueue.toString());
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 response -> {
                     Log.d("Tracker macro", response);

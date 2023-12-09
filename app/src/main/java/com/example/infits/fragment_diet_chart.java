@@ -90,6 +90,7 @@ public class fragment_diet_chart extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate ( R.layout.fragment_diet_chart , container , false );
         hooks(view);
+
         getmicronutrientdata();
         //set daily weekly and yearly in spinner
         ArrayAdapter<CharSequence> dailyAdapter = ArrayAdapter.createFromResource(requireActivity(),

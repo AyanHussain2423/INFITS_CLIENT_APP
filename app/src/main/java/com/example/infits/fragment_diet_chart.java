@@ -266,6 +266,7 @@ public class fragment_diet_chart extends Fragment {
                     LocalDateTime now = LocalDateTime.now();// gets the current date and time
                     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd H:m:s");
                     data.put("clientID", DataFromDatabase.clientuserID);
+
                     data.put("today",dtf.format(now));
                     return data;
                 }

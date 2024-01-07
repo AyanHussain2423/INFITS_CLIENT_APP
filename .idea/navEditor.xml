@@ -64,6 +64,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="dashBoardMain">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-336" />
+                            <option name="y" value="4452" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="overview">
                     <value>
                       <LayoutPositions>

@@ -24,6 +24,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -63,6 +64,7 @@ public class ConsultationFragment extends Fragment {
     Button connectDoc;
 
     TextView textView58;
+    ImageView back;
 
     public static int psection1=0;
     public static int psection2=0;
@@ -138,7 +140,7 @@ public class ConsultationFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_consultation, container, false);
-
+        back = view.findViewById(R.id.imgback);
         section1 = view.findViewById(R.id.section1);
         section2 = view.findViewById(R.id.section2);
         section3 = view.findViewById(R.id.section3);
@@ -176,6 +178,15 @@ public class ConsultationFragment extends Fragment {
         t5.setText(String.valueOf(psection5/13*100)+"%");
         p6.setProgress(psection6/14);
         t6.setText(String.valueOf(psection6/14*100)+"%");
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), DashBoardMain.class));
+                requireActivity().finish();
+                getActivity().overridePendingTransition(0, 0);
+            }
+        });
 
         section1.setOnClickListener(new View.OnClickListener() {
             @Override

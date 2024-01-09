@@ -57,6 +57,7 @@ public class ConsultationFragment extends Fragment {
     CardView section2;
     CardView section3;
     CardView section4;
+    
     CardView section5;
     CardView section6;
 

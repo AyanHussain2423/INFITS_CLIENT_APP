@@ -1,536 +1,570 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ConsultationFragment">
 
-    <FrameLayout
+
+    <ImageButton
+        android:id="@+id/imgback"
+        android:layout_width="30dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24"
+        app:tint="#6076DC" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nats_regular"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="CONSULTATION"
+            android:textColor="@color/black"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/connectDoc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nats_regular"
+            android:text="COMPLETE YOUR DETAILS"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="25dp"
-            android:orientation="vertical">
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/textView45"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nats_regular"
-                android:text="CONSULTATION"
-                android:textColor="@color/black"
-                android:textSize="26sp"
-                android:layout_marginTop="15dp"/>
+            <ImageView
+                android:id="@+id/imageView24"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/drawable_purple_rect" />
 
-            <TextView
-                android:id="@+id/textView58"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nats_regular"
-                android:text="COMPLETE YOUR DETAILS"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/section1"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:gravity="center_vertical"
-                android:layout_marginTop="25dp">
-
-                <ImageView
-                    android:id="@+id/imageView24"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:scaleType="fitStart"
-                    android:src="@drawable/drawable_purple_rect" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/section1"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    app:cardCornerRadius="10dp">
+                    <TextView
+                        android:id="@+id/section1t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/baloo2"
+                        android:text="Section 1"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
                     <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-
-                        <TextView
-                            android:id="@+id/section1t"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="20dp"
-                            android:fontFamily="@font/baloo2"
-                            android:text="Section 1"
-                            android:textColor="@color/black"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginEnd="10dp">
-
-                            <TextView
-                                android:id="@+id/section1perc"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:fontFamily="@font/baloo2"
-                                android:text="100%"
-                                android:textColor="@color/black"
-                                android:textSize="10sp"
-                                android:textStyle="bold" />
-
-                            <com.tenclouds.gaugeseekbar.GaugeSeekBar
-                                android:id="@+id/sectionprogress1"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:progress="30"
-                                app:progress="0.75"
-                                app:interactive="false"
-                                app:progressGradient="@array/section_one"
-                                app:startAngleDegrees="0"
-                                app:thumbColor="@android:color/transparent"
-                                app:thumbDrawable="@android:color/transparent"
-                                app:thumbRadius="0dp"
-                                app:trackGradient="@array/consultation_track_color" />
-                        </RelativeLayout>
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:layout_marginTop="25dp">
-
-                <ImageView
-                    android:id="@+id/imageView31"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:srcCompat="@drawable/orange_rect" />
-
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/section2"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/white"
-                    android:clickable="true"
-                    app:cardCornerRadius="10dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp">
 
                         <TextView
-                            android:id="@+id/section2t"
+                            android:id="@+id/section1perc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="20dp"
+                            android:layout_centerInParent="true"
                             android:fontFamily="@font/baloo2"
-                            android:text="Section 2"
+                            android:text="100%"
                             android:textColor="@color/black"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             android:textStyle="bold" />
 
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginEnd="10dp">
-
-                            <TextView
-                                android:id="@+id/section2perc"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:fontFamily="@font/baloo2"
-                                android:text="75%"
-                                android:textColor="@color/black"
-                                android:textSize="10sp"
-                                android:textStyle="bold" />
-
-                            <com.tenclouds.gaugeseekbar.GaugeSeekBar
-                                android:id="@+id/sectionprogress2"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:progressTint="@color/blue"
-                                app:progress="0.75"
-                                app:interactive="false"
-                                app:progressGradient="@array/section_two"
-                                app:startAngleDegrees="0"
-                                app:thumbColor="@android:color/transparent"
-                                app:thumbDrawable="@android:color/transparent"
-                                app:thumbRadius="0dp"
-                                app:trackGradient="@array/consultation_track_color" />
-                        </RelativeLayout>
+                        <com.tenclouds.gaugeseekbar.GaugeSeekBar
+                            android:id="@+id/sectionprogress1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:progress="30"
+                            app:interactive="false"
+                            app:progress="0.75"
+                            app:progressGradient="@array/section_one"
+                            app:startAngleDegrees="0"
+                            app:thumbColor="@android:color/transparent"
+                            app:thumbDrawable="@android:color/transparent"
+                            app:thumbRadius="0dp"
+                            app:trackGradient="@array/consultation_track_color" />
                     </RelativeLayout>
-                </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="25dp"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/imageView32"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:srcCompat="@drawable/yellow_rect" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/section3"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/white"
-                    android:clickable="true"
-                    app:cardCornerRadius="10dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/section3t"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="20dp"
-                            android:fontFamily="@font/baloo2"
-                            android:text="Section 3"
-                            android:textColor="@color/black"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginEnd="10dp">
-
-                            <TextView
-                                android:id="@+id/section3perc"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:fontFamily="@font/baloo2"
-                                android:text="75%"
-                                android:textColor="@color/black"
-                                android:textSize="10sp"
-                                android:textStyle="bold" />
-
-                            <com.tenclouds.gaugeseekbar.GaugeSeekBar
-                                android:id="@+id/sectionprogress3"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:outlineSpotShadowColor="#9873FF"
-                                android:progress="30"
-                                app:interactive="false"
-                                android:progressTint="@color/blue"
-                                app:progress="0.75"
-                                app:progressGradient="@array/section_three"
-                                app:startAngleDegrees="0"
-                                app:thumbColor="@android:color/transparent"
-                                app:thumbDrawable="@android:color/transparent"
-                                app:thumbRadius="0dp"
-                                app:trackGradient="@array/consultation_track_color" />
-                        </RelativeLayout>
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="25dp"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/imageView33"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:srcCompat="@drawable/pick_rect" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/section4"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/white"
-                    android:clickable="true"
-                    app:cardCornerRadius="10dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-
-                        <TextView
-                            android:id="@+id/section4t"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="20dp"
-                            android:fontFamily="@font/baloo2"
-                            android:text="Section 4"
-                            android:textColor="@color/black"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginEnd="10dp">
-
-                            <TextView
-                                android:id="@+id/section4perc"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:fontFamily="@font/baloo2"
-                                android:text="75%"
-                                android:textColor="@color/black"
-                                android:textSize="10sp"
-                                android:textStyle="bold" />
-
-                            <com.tenclouds.gaugeseekbar.GaugeSeekBar
-                                android:id="@+id/sectionprogress4"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:outlineSpotShadowColor="#9873FF"
-                                android:progress="30"
-                                app:interactive="false"
-                                android:progressTint="@color/blue"
-                                app:progress="0.75"
-                                app:progressGradient="@array/section_four"
-                                app:startAngleDegrees="0"
-                                app:thumbColor="@android:color/transparent"
-                                app:thumbDrawable="@android:color/transparent"
-                                app:thumbRadius="0dp"
-                                app:trackGradient="@array/consultation_track_color" />
-                        </RelativeLayout>
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:layout_marginTop="25dp">
-
-                <ImageView
-                    android:id="@+id/imageView34"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:srcCompat="@drawable/blue_rect" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/section5"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/white"
-                    android:clickable="true"
-                    app:cardCornerRadius="10dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-
-                        <TextView
-                            android:id="@+id/section5t"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="20dp"
-                            android:fontFamily="@font/baloo2"
-                            android:text="Section 5"
-                            android:textColor="@color/black"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginEnd="10dp">
-
-                            <TextView
-                                android:id="@+id/section5perc"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:fontFamily="@font/baloo2"
-                                android:text="75%"
-                                android:textColor="@color/black"
-                                android:textSize="10sp"
-                                android:textStyle="bold" />
-
-                            <com.tenclouds.gaugeseekbar.GaugeSeekBar
-                                android:id="@+id/sectionprogress5"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:outlineSpotShadowColor="#9873FF"
-                                android:progress="30"
-                                app:interactive="false"
-                                android:progressTint="@color/blue"
-                                app:progress="0.75"
-                                app:progressGradient="@array/section_five"
-                                app:startAngleDegrees="0"
-                                app:thumbColor="@android:color/transparent"
-                                app:thumbDrawable="@android:color/transparent"
-                                app:thumbRadius="0dp"
-                                app:trackGradient="@array/consultation_track_color" />
-                        </RelativeLayout>
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:layout_marginTop="25dp">
-                <ImageView
-                    android:id="@+id/imageView35"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:srcCompat="@drawable/green_rect" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/section6"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/white"
-                    android:clickable="true"
-                    app:cardCornerRadius="10dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-
-                        <TextView
-                            android:id="@+id/section6t"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="20dp"
-                            android:fontFamily="@font/baloo2"
-                            android:text="Section 6"
-                            android:textColor="@color/black"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginEnd="10dp">
-
-                            <TextView
-                                android:id="@+id/section6perc"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:fontFamily="@font/baloo2"
-                                android:text="75%"
-                                android:textColor="@color/black"
-                                android:textSize="10sp"
-                                android:textStyle="bold" />
-
-                            <com.tenclouds.gaugeseekbar.GaugeSeekBar
-                                android:id="@+id/sectionprogress6"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:outlineSpotShadowColor="#9873FF"
-                                android:progress="30"
-                                app:interactive="false"
-                                android:progressTint="@color/blue"
-                                app:progress="0.75"
-                                app:progressGradient="@array/section_six"
-                                app:startAngleDegrees="0"
-                                app:thumbColor="@android:color/transparent"
-                                app:thumbDrawable="@android:color/transparent"
-                                app:thumbRadius="0dp"
-                                app:trackGradient="@array/consultation_track_color" />
-                        </RelativeLayout>
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
-            <Button
-                android:id="@+id/connectDoc"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="#B9B9B9"
-                android:fontFamily="@font/nats_regular"
-                android:text="Connect to a Doctor"
-                android:textAllCaps="false"
-                android:textSize="18sp"
-                app:cornerRadius="10sp"/>
         </LinearLayout>
-    </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView31"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/orange_rect" />
 
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/section2"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="10dp">
 
-</ScrollView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/section2t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/baloo2"
+                        android:text="Section 2"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp">
+
+                        <TextView
+                            android:id="@+id/section2perc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/baloo2"
+                            android:text="75%"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <com.tenclouds.gaugeseekbar.GaugeSeekBar
+                            android:id="@+id/sectionprogress2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:progressTint="@color/blue"
+                            app:interactive="false"
+                            app:progress="0.75"
+                            app:progressGradient="@array/section_two"
+                            app:startAngleDegrees="0"
+                            app:thumbColor="@android:color/transparent"
+                            app:thumbDrawable="@android:color/transparent"
+                            app:thumbRadius="0dp"
+                            app:trackGradient="@array/consultation_track_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView32"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/yellow_rect" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/section3"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/section3t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/baloo2"
+                        android:text="Section 3"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp">
+
+                        <TextView
+                            android:id="@+id/section3perc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/baloo2"
+                            android:text="75%"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <com.tenclouds.gaugeseekbar.GaugeSeekBar
+                            android:id="@+id/sectionprogress3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:outlineSpotShadowColor="#9873FF"
+                            android:progress="30"
+                            android:progressTint="@color/blue"
+                            app:interactive="false"
+                            app:progress="0.75"
+                            app:progressGradient="@array/section_three"
+                            app:startAngleDegrees="0"
+                            app:thumbColor="@android:color/transparent"
+                            app:thumbDrawable="@android:color/transparent"
+                            app:thumbRadius="0dp"
+                            app:trackGradient="@array/consultation_track_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView33"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/pick_rect" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/section4"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/section4t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/baloo2"
+                        android:text="Section 4"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp">
+
+                        <TextView
+                            android:id="@+id/section4perc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/baloo2"
+                            android:text="75%"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <com.tenclouds.gaugeseekbar.GaugeSeekBar
+                            android:id="@+id/sectionprogress4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:outlineSpotShadowColor="#9873FF"
+                            android:progress="30"
+                            android:progressTint="@color/blue"
+                            app:interactive="false"
+                            app:progress="0.75"
+                            app:progressGradient="@array/section_four"
+                            app:startAngleDegrees="0"
+                            app:thumbColor="@android:color/transparent"
+                            app:thumbDrawable="@android:color/transparent"
+                            app:thumbRadius="0dp"
+                            app:trackGradient="@array/consultation_track_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView34"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/blue_rect" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/section5"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/section5t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/baloo2"
+                        android:text="Section 5"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp">
+
+                        <TextView
+                            android:id="@+id/section5perc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/baloo2"
+                            android:text="75%"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <com.tenclouds.gaugeseekbar.GaugeSeekBar
+                            android:id="@+id/sectionprogress5"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:outlineSpotShadowColor="#9873FF"
+                            android:progress="30"
+                            android:progressTint="@color/blue"
+                            app:interactive="false"
+                            app:progress="0.75"
+                            app:progressGradient="@array/section_five"
+                            app:startAngleDegrees="0"
+                            app:thumbColor="@android:color/transparent"
+                            app:thumbDrawable="@android:color/transparent"
+                            app:thumbRadius="0dp"
+                            app:trackGradient="@array/consultation_track_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView35"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/green_rect" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/section6"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/section6t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/baloo2"
+                        android:text="Section 6"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp">
+
+                        <TextView
+                            android:id="@+id/section6perc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/baloo2"
+                            android:text="75%"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <com.tenclouds.gaugeseekbar.GaugeSeekBar
+                            android:id="@+id/sectionprogress6"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:outlineSpotShadowColor="#9873FF"
+                            android:progress="30"
+                            android:progressTint="@color/blue"
+                            app:interactive="false"
+                            app:progress="0.75"
+                            app:progressGradient="@array/section_six"
+                            app:startAngleDegrees="0"
+                            app:thumbColor="@android:color/transparent"
+                            app:thumbDrawable="@android:color/transparent"
+                            app:thumbRadius="0dp"
+                            app:trackGradient="@array/consultation_track_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/connectDoc"
+        android:layout_width="367dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#B9B9B9"
+        android:fontFamily="@font/nats_regular"
+        android:text="Connect to a Doctor"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:cornerRadius="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

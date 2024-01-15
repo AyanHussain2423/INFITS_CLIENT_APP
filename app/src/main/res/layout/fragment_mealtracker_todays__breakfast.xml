@@ -46,10 +46,10 @@ android:layout_height="match_parent"
 
         <TextView
             android:id="@+id/header_title"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="5.5"
             android:layout_marginStart="75dp"
+            android:layout_weight="5.5"
             android:fontFamily="@font/nats_regular"
             android:text="Breakfast"
             android:textAlignment="gravity"

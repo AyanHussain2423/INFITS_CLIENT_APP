@@ -43,6 +43,7 @@
                 android:fontFamily="@font/baloo2"
                 android:hint="Enter User name or Email-ID"
                 android:inputType="textPersonName"
+                
                 android:paddingHorizontal="20dp"
                 android:paddingTop="10dp"
                 android:textColor="@color/white"

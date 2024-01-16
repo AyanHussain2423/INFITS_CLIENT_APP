@@ -18,269 +18,262 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SIGN UP"
-            android:fontFamily="@font/nats_regular"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:textSize="32sp"
-            android:layout_marginVertical="10dp"/>
-
-        <EditText
-            android:id="@+id/new_name"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="@string/fullName_hint"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="40dp"
-            android:fontFamily="@font/nats_regular"
-            android:textSize="18sp"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="10dp"
-            android:background="@drawable/fullname_back"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            app:hintTextColor="@color/white"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/new_user_name"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="@string/userName_hint"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="40dp"
-            android:fontFamily="@font/nats_regular"
-            android:textSize="18sp"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/username_background"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            app:hintTextColor="@color/white"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/new_email"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="@string/email_hint"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="40dp"
-            android:fontFamily="@font/nats_regular"
-            android:textSize="18sp"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/email_edit_back"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            app:hintTextColor="@color/white"
-            android:inputType="textPersonName"/>
-
-        <EditText
-            android:id="@+id/new_password"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="@string/password_hint"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="40dp"
-            android:fontFamily="@font/baloo2"
-            android:textSize="18sp"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/password_background"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            app:hintTextColor="@color/white"
-            android:inputType="textPassword"/>
-        <!--    new_phone_number-->
-        <EditText
-            android:id="@+id/new_phone_number"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="@string/phone_hint"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="40dp"
-            android:fontFamily="@font/nats_regular"
-            android:textSize="18sp"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/phone_background"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            app:hintTextColor="@color/white"
-            android:inputType="number"/>
-        <!---->
         <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="10dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gender"
-                android:textColor="@color/white"
-                android:textSize="19sp"
+                android:text="SIGN UP"
                 android:fontFamily="@font/nats_regular"
-                android:layout_gravity="center_vertical"/>
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
-            <RadioGroup
-                android:id="@+id/gender_rg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <RadioButton
-                    android:id="@+id/male_rb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Male"
-                    android:textColor="@color/white"
-                    android:textSize="19sp"
-                    android:fontFamily="@font/nats_regular"
-                    android:buttonTint="@color/white"
-                    android:layout_marginEnd="20dp"/>
-                <RadioButton
-                    android:id="@+id/female_rb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Female"
-                    android:textColor="@color/white"
-                    android:textSize="19sp"
-                    android:fontFamily="@font/nats_regular"
-                    android:buttonTint="@color/white"
-                    android:layout_marginEnd="20dp"/>
-            </RadioGroup>
-        </LinearLayout>
-        <!---->
-        <EditText
-            android:id="@+id/age_background"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="@string/Age_hint"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="40dp"
-            android:fontFamily="@font/nats_regular"
-            android:textSize="18sp"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="10dp"
-            android:background="@drawable/age_background"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            app:hintTextColor="@color/white"
-            android:inputType="number"/>
-
-        <EditText
-            android:id="@+id/new_height"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="@string/Height_hint"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="40dp"
-            android:fontFamily="@font/nats_regular"
-            android:textSize="18sp"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/height"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            app:hintTextColor="@color/white"
-            android:inputType="number"/>
-        <EditText
-            android:id="@+id/new_weight"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="@string/Weight_hint"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="40dp"
-            android:fontFamily="@font/nats_regular"
-            android:textSize="18sp"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/weight_background"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            app:hintTextColor="@color/white"
-            android:inputType="number"/>
-        <EditText
-            android:id="@+id/new_referral_code"
-            android:hint="Enter Referral Code"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="40dp"
-            android:fontFamily="@font/nats_regular"
-            android:textSize="18sp"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/referral_code_background"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            app:hintTextColor="@color/white"
-            android:inputType="text"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <RadioButton
-                android:id="@+id/agree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_regular"
                 android:textColor="@color/white"
-                android:text="I agree to Infit's "
-                android:textSize="8sp"
-                android:buttonTint="@color/white"
-                android:paddingStart="7dp"/>
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:layout_marginVertical="10dp"/>
+
+            <EditText
+                android:id="@+id/new_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="40dp"
+                android:background="@drawable/fullname_back"
+                android:fontFamily="@font/nats_regular"
+                android:hint="@string/fullName_hint"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                app:hintTextColor="@color/white" />
+
+            <EditText
+                android:id="@+id/new_user_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/username_background"
+                android:fontFamily="@font/nats_regular"
+                android:hint="@string/userName_hint"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                app:hintTextColor="@color/white" />
+
+            <EditText
+                android:id="@+id/new_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/email_edit_back"
+                android:fontFamily="@font/nats_regular"
+                android:hint="@string/email_hint"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                app:hintTextColor="@color/white" />
+
+            <EditText
+                android:id="@+id/new_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/password_background"
+                android:fontFamily="@font/baloo2"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                app:hintTextColor="@color/white" />
+            <!--    new_phone_number-->
+            <EditText
+                android:id="@+id/new_phone_number"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/phone_background"
+                android:fontFamily="@font/nats_regular"
+                android:hint="@string/phone_hint"
+                android:inputType="number"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                app:hintTextColor="@color/white" />
+            <!---->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/nats_regular"
+                    android:text="Gender"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <RadioGroup
+                    android:id="@+id/gender_rg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/male_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:buttonTint="@color/white"
+                        android:fontFamily="@font/nats_regular"
+                        android:text="Male"
+                        android:textColor="@color/white"
+                        android:textSize="19sp" />
+
+                    <RadioButton
+                        android:id="@+id/female_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:buttonTint="@color/white"
+                        android:fontFamily="@font/nats_regular"
+                        android:text="Female"
+                        android:textColor="@color/white"
+                        android:textSize="19sp" />
+                </RadioGroup>
+            </LinearLayout>
+            <!---->
+            <EditText
+                android:id="@+id/age_background"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="40dp"
+                android:background="@drawable/age_background"
+                android:fontFamily="@font/nats_regular"
+                android:hint="@string/Age_hint"
+                android:inputType="number"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                app:hintTextColor="@color/white" />
+
+            <EditText
+                android:id="@+id/new_height"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/height"
+                android:fontFamily="@font/nats_regular"
+                android:hint="@string/Height_hint"
+                android:inputType="number"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                app:hintTextColor="@color/white" />
+
+            <EditText
+                android:id="@+id/new_weight"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/weight_background"
+                android:fontFamily="@font/nats_regular"
+                android:hint="@string/Weight_hint"
+                android:inputType="number"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                app:hintTextColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:fontFamily="@font/roboto_regular"
+                    android:paddingStart="7dp"
+                    android:text="I agree to Infit's "
+                    android:textColor="@color/white"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/term"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Terms and Conditions"
+                    android:textAlignment="center"
+                    android:textColor="#254396"
+                    android:textSize="8sp" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/signbtn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:clickable="false"
+                android:fontFamily="@font/nats_regular"
+                android:text="Create an Account"
+                android:textAllCaps="false"
+                android:textColor="#2F3D96"
+                android:textSize="14sp"
+                app:cornerRadius="10sp"/>
+
             <TextView
-                android:id="@+id/term"
+                android:id="@+id/memlog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Already a member? Login"
+                android:fontFamily="@font/nats_regular"
+                android:textSize="12sp"
                 android:clickable="true"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Terms and Conditions"
-                android:textAlignment="center"
-                android:textColor="#254396"
-                android:textSize="8sp"/>
+                android:layout_marginBottom="10dp"/>
         </LinearLayout>
-        <Button
-            android:id="@+id/signbtn"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:clickable="false"
-            android:fontFamily="@font/nats_regular"
-            android:text="Create an Account"
-            android:textAllCaps="false"
-            android:textColor="#2F3D96"
-            android:textSize="14sp"
-            app:cornerRadius="10sp"/>
-
-        <TextView
-            android:id="@+id/memlog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Already a member? Login"
-            android:fontFamily="@font/nats_regular"
-            android:textSize="12sp"
-            android:clickable="true"
-            android:layout_marginBottom="10dp"/>
-    </LinearLayout>
     </ScrollView>
 </RelativeLayout>
